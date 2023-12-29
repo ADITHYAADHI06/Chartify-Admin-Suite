@@ -1,9 +1,33 @@
 import React from 'react'
 import "./App.css"
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { FiSettings } from 'react-icons/fi';
+import { TooltipComponent } from '@syncfusion/ej2-react-popups';
+
 const App = () => {
     return (
-        <div className='text-3xl'>App</div>
+        <div>
+            <BrowserRouter>
+                <div className='flex relative dark:bg-main-dark-bg'>
+
+                    {/* Settings fixed Button */}
+                    <div className='fixed right-4 bottom-4' style={{ zIndex: '1000' }}>
+                        <TooltipComponent content="Settings" position="Top">
+
+                            <button type="button"
+                                style={{ background: 'blue', borderRadius: '50%' }}
+                                className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray" >
+                                <FiSettings />
+                            </button>
+
+                        </TooltipComponent>
+                    </div>
+
+
+                </div>
+            </BrowserRouter>
+        </div>
     )
 }
 
