@@ -9,4 +9,5 @@ import { StateContextProvider } from "./contexts/StateContextProvider";
 ReactDOM.render(
     <StateContextProvider>
         <App />
-    </StateContextProvider>, document.getElementById("root"))
+    </StateContextProvider>,
+    document.getElementById("root"),);
